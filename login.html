@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Event Registration Form</title>
+  <link rel="stylesheet" href="boxicons.min.css">
+
+ <style>
+   body {
+     font-family: Arial, sans-serif;
+     background-color: #eef2f3;
+     padding: 30px;
+   }
+   .form-container {
+     background-color: white;
+     max-width: 400px;
+     margin: auto;
+     padding: 20px 30px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px gray;
+   }
+   h2 {
+     text-align: center;
+     color: #333;
+   }
+   label {
+     display: block;
+     margin-top: 10px;
+     font-weight: bold;
+   }
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"] {
+     width: 100%;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+   }
+   button {
+     margin-top: 20px;
+     width: 100%;
+     padding: 10px;
+     background-color: #0d130e;
+     color: blue;
+     border: none;
+     font-size: 16px;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   button:hover {
+     background-color: #218838;
+   }
+   .message {
+     text-align: center;
+     margin-top: 20px;
+     color: green;
+   }
+ </style>
+</head>
+<body>
+
+ <div class="form-container">
+   <h2>Event Registration</h2>
+   <form id="registrationForm" onsubmit="return registerUser();">
+
+
+     <label for="name">Full Name:</label>
+     <input type="text" id="name" required>
+
+     <label for="email">Email Address:</label>
+  <input type="email" id="email" required>
+
+       <label for="email"> confrom Email Address:</label>
+     <input type="email" id="email" required>
+
+     <label for="phone">Phone Number:</label>
+     <input type="tel" id="phone" required>
+
+     <button type="submit">Register</button>
+   </form>
+   <div class="message" id="successMessage"></div>
+ </div>
+
+ <script>
+   function registerUser() {
+     const name = document.getElementById("name").value;
+     const email = document.getElementById("email").value;
+     const phone = document.getElementById("phonelue;
+
+     // You could add more validation here
+
+     document.getElementById("successMessage").innerText =
+       `Thank you, ${name}! Your registration is successful.`;
+
+     // Optional: Reset the form
+     document.getElementById("registrationForm").reset();
+
+</html>
+     return false; // Prevent actual form submission
+   }
+ </script>
+</body>
